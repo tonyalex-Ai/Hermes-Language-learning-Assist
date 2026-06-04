@@ -1,0 +1,4 @@
+name: review_scheduler
+version: "0.1.0"
+description: Schedule and manage spaced repetition reviews
+author: "Pomelo"

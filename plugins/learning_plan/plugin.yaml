@@ -1,0 +1,4 @@
+name: learning_plan
+version: "0.1.0"
+description: Query today's learning plan from daily_learning_content JSON
+author: "Pomelo"

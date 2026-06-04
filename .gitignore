@@ -1,0 +1,33 @@
+# Environment
+.env
+.env.local
+*.key
+credentials.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Runtime data
+data/*.json
+!data/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Hermes runtime
+~/.hermes/
+.hermes.md

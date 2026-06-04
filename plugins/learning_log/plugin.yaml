@@ -1,0 +1,4 @@
+name: learning_log
+version: "0.1.0"
+description: Query daily learning log JSON files
+author: "Pomelo"

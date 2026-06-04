@@ -1,0 +1,48 @@
+# Hermes Agent 配置模板
+# 完整文档见 docs/hermes-agent-manual.md
+
+model: "deepseek-chat"
+
+llm:
+  provider: "deepseek"               # deepseek | gemini
+  deepseek_model: "deepseek-chat"
+  gemini_model: "gemini-2.0-flash"
+
+toolsets:
+  - "hermes-cli"
+  - "web"
+  - "file"
+  - "vision"
+
+agent:
+  max_turns: 90
+  gateway_timeout: 1800
+  api_max_retries: 3
+
+terminal:
+  backend: "local"
+  cwd: "."
+  timeout: 180
+
+plugins:
+  enabled:
+    - init
+    - user_profile
+    - learning_plan
+    - review_scheduler
+    - learning_log
+
+skills:
+  disabled: []
+  platform_disabled: {}
+
+platform_toolsets: {}
+
+network:
+  force_ipv4: false
+
+logging:
+  level: "INFO"
+  max_size_mb: 5
+
+timezone: "Asia/Shanghai"

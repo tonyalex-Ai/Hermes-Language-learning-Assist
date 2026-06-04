@@ -1,0 +1,4 @@
+name: user_profile
+version: "0.1.0"
+description: User profile CRUD stored in ~/.hermes/memories/USER.md
+author: "Pomelo"
