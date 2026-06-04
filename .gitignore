@@ -33,3 +33,6 @@ Thumbs.db
 
 # Hermes runtime user data (not the project's .hermes.md constitution)
 ~/.hermes/
+
+# Development config
+AGENTS.md
