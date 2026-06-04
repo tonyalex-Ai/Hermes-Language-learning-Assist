@@ -31,6 +31,5 @@ tests/test_full_flow_result.md
 .DS_Store
 Thumbs.db
 
-# Hermes runtime
+# Hermes runtime user data (not the project's .hermes.md constitution)
 ~/.hermes/
-.hermes.md
