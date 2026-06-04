@@ -34,10 +34,15 @@ AI 分析知识库，生成 60 天学习计划
 # 1. 配置 API Key
 cp .env.example .env && vim .env
 
-# 2. 运行开发版 Agent
+# 2. 选择启动方式
+
+# 方式 A：Router 模式（轻量 HTTP API，供外部 Router 对接）
+uv run python main.py --server
+
+# 方式 B：Gateway 模式（完整消息路由 + 微信/TG/Discord 推送）
 uv run python scripts/dev_agent.py
 
-# 3. 启动 Gateway（可选，用于微信/TG 推送）
+# 方式 C：Gateway + WebUI 控制台
 uv run python scripts/run_gateway.py
 ```
 
