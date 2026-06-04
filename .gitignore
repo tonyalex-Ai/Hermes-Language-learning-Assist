@@ -18,6 +18,9 @@ build/
 data/*.json
 !data/.gitkeep
 
+# Test artifacts
+tests/test_full_flow_result.md
+
 # IDE
 .vscode/
 .idea/

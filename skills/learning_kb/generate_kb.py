@@ -284,7 +284,7 @@ kb["meta"]["unique_words_in_dialogues"] = len(cov)
 kb["meta"]["vocab_coverage_pct"] = round(min(len(cov)/1000*100,100),1)
 kb["meta"]["total_dialogue_lines"] = sum(len(sc["dialogue"]) for sc in kb["scenarios"])
 
-path = "/home/pomelo/hermes_project1_language_learning/skills/learning_kb/knowledge_base.json"
+path = Path(__file__).resolve().parent / "knowledge_base.json"
 with open(path,"w",encoding="utf-8") as f:
     json.dump(kb, f, ensure_ascii=False, indent=2)
 

@@ -156,7 +156,7 @@ my-agent-project/skills/
 
 > 开发调试时，将 `~/.hermes/skills/` 软链到项目目录：
 > ```bash
-> ln -sf /home/pomelo/my-agent-project/skills ~/.hermes/skills
+> ln -sf /path/to/your-project/skills ~/.hermes/skills
 > ```
 > **注意**：该目录会被 `hermes skills install` 操作影响，建议开发时手动管理。
 
