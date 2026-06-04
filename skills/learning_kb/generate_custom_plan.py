@@ -1,7 +1,7 @@
 """
 定制轨道框架生成子Agent v1
 画像注入完成后触发，从 HERMES.MD 获取用户画像，
-调用 LLM (Gemini 3.1) 生成 60日定制学习计划框架（仅含大纲/方向），
+调用 LLM 生成 60日定制学习计划框架（仅含大纲/方向），
 输出目标为 custom_plan.json。
 
 该JSON不包含任何具体词条/对话/例句，仅作为后续LLM生成DAILY LEARNING内容的参考框架。
@@ -86,7 +86,7 @@ def build_prompt(profile: dict) -> str:
                         "type": "object",
                         "properties": {
                             "generated_at": {"type": "string", "format": "ISO8601"},
-                            "model": {"type": "string", "const": MODEL},
+                            "model": {"type": "string"},
                             "total_days": {"type": "integer", "const": 60},
                             "target_language": {"type": "string"},
                             "user_name": {"type": "string"},
@@ -136,7 +136,7 @@ def build_prompt(profile: dict) -> str:
 
 
 def call_llm(prompt: str) -> str:
-    """Call LLM (DeepSeek / Gemini) via unified client."""
+    """Call LLM via unified client."""
     system_prompt = (
         "你是专业语言学习课程设计师。根据用户画像生成60日定制学习计划框架JSON。"
         "只输出原始JSON，不要任何解释、markdown代码块标记或其他文字。"
@@ -145,8 +145,8 @@ def call_llm(prompt: str) -> str:
 
 
 def main():
-    if not API_KEY:
-        print("Error: GEMINI_API_KEY or GOOGLE_API_KEY not set", file=sys.stderr)
+    if not os.getenv("OPENAI_API_KEY"):
+        print("Error: OPENAI_API_KEY not set", file=sys.stderr)
         sys.exit(1)
 
     profile = read_profile()

@@ -31,7 +31,7 @@ AI 分析知识库，生成 60 天学习计划
 ## 快速开始
 
 ```bash
-# 1. 配置 API Key
+# 1. 配置 API Key（推荐 OpenAI）
 cp .env.example .env && vim .env
 
 # 2. 选择启动方式

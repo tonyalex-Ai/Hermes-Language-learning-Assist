@@ -6,10 +6,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "fastapi>=0.136.1",
-    "google-genai",
     "hermes-agent @ git+https://github.com/NousResearch/Hermes-Agent.git@v2026.4.23",
     "qrcode>=8.2",
     "uvicorn>=0.47.0",
 ]
-
-

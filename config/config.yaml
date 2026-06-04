@@ -1,12 +1,10 @@
 # Hermes Agent 配置模板
 # 完整文档见 docs/hermes-agent-manual.md
 
-model: "deepseek-chat"
+model: "gpt-4o"
 
 llm:
-  provider: "deepseek"               # deepseek | gemini
-  deepseek_model: "deepseek-chat"
-  gemini_model: "gemini-2.0-flash"
+  provider: "openai"
 
 toolsets:
   - "hermes-cli"

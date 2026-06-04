@@ -48,8 +48,8 @@ def _run_server_mode(port: int = 5001) -> None:
     cfg_path = Path(__file__).parent / "config" / "config.yaml"
     with open(cfg_path) as f:
         cfg = yaml.safe_load(f) or {}
-    model = cfg.get("llm", {}).get("deepseek_model", "deepseek-chat")
-    provider = cfg.get("llm", {}).get("provider", "deepseek")
+    model = cfg.get("llm", {}).get("openai_model", "gpt-4o")
+    provider = cfg.get("llm", {}).get("provider", "openai")
     toolsets = cfg.get("toolsets", ["hermes-cli", "web", "file", "vision"])
     # 4. 启动 Hermes Gateway 后台（加载 skills/plugins）
     print("正在启动 Hermes Gateway（后台）...")
